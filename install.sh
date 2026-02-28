@@ -55,8 +55,7 @@ setup_schedule() {
 	schedule="00 */2 * * *"
 	job_id="nordvpn_updater"
 	sed -i "/${job_id}/d" "$services_start_script"
-	log="/var/log/nordvpn-updater.log"
-	command="/bin/sh /jffs/scripts/nordvpn_updater.sh > $log 2>&1"
+	command="/bin/sh /jffs/scripts/nordvpn_updater.sh > /dev/null 2>&1"
 	cron="cru a ${job_id} ${schedule} ${command}"
 	eval "$cron"
 	echo "$cron" >> "$services_start_script"
@@ -72,6 +71,7 @@ main() {
 	ensure_jq
 	install_updater
 	setup_schedule
+	/jffs/scripts/nordvpn_updater.sh
 }
 
 main
