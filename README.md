@@ -29,7 +29,7 @@ Removing the directive `verify-x509-name` is safe still. As openvpn still valida
 
 # Install
  1. ssh into your router
- 2. `curl -sL https://codeberg.org/kdehairy/nordvpn_updater/raw/branch/main/install.sh | sh`
+ 2. `curl -sL https://raw.githubusercontent.com/kdehairy/nordvpn-updater/main/install.sh | sh`
  
  The installer will set a 2 hours schedule in a cron job to invoke the updater.
 
