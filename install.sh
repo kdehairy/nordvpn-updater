@@ -49,7 +49,7 @@ install_updater() {
 }
 
 setup_schedule() {
-	services_start_script="/jffs/scripts/services_start"
+	services_start_script="/jffs/scripts/services-start"
 	touch "$services_start_script"
 	chmod +x "$services_start_script"
 	schedule="00 */2 * * *"
