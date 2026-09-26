@@ -44,7 +44,7 @@ ensure_jq() {
 
 install_updater() {
 	installer="/jffs/scripts/nordvpn_updater.sh"
-	wget -q -O "$installer" https://codeberg.org/kdehairy/nordvpn_updater/raw/branch/main/nordvpn-updater.sh
+	wget -q -O "$installer" https://raw.githubusercontent.com/kdehairy/nordvpn-updater/main/nordvpn-updater.sh
 	chmod 7555 "$installer"
 }
 
